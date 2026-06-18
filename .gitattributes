@@ -17,3 +17,4 @@ PlaywrightTests/obj/PlaywrightTests.csproj.nuget.g.props filter=lfs diff=lfs mer
 PlaywrightTests/obj/PlaywrightTests.csproj.nuget.g.targets filter=lfs diff=lfs merge=lfs -text
 PlaywrightTests/obj/project.assets.json filter=lfs diff=lfs merge=lfs -text
 PlaywrightTests/obj/project.nuget.cache filter=lfs diff=lfs merge=lfs -text
+PlaywrightTests/bin/Debug/net8.0/* filter=lfs diff=lfs merge=lfs -text
