@@ -8,6 +8,12 @@ public static class Globals
 {
     public static string BaseUrl = "https://the-internet.herokuapp.com/";
 
+    //BUTTONS PAGE  
+    public static string ButtonsPageTitle = "h3";    
+    public static string ButtonsPageTitleCopy = "Add/Remove Elements";
+    public static string AddButton = "//div[@class='example']/button";
+    public static string DeleteButton = "//button[@class='added-manually']";
+
     //CHECKBOX PAGE
     public static string CheckboxPageTitle = "h3";    
     public static string CheckboxPageTitleCopy = "Checkboxes";
