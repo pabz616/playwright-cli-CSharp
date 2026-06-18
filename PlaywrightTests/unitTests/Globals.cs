@@ -1,0 +1,40 @@
+using System.Text.RegularExpressions;
+using Microsoft.Playwright;
+using Microsoft.Playwright.MSTest;
+
+namespace UnitTests;
+
+public static class Globals
+{
+    public static string BaseUrl = "https://the-internet.herokuapp.com/";
+
+    //CHECKBOX PAGE
+    public static string CheckboxPageTitle = "h3";    
+    public static string CheckboxPageTitleCopy = "Checkboxes";
+    public static string Checkbox1 = "(//input[@type='checkbox'])[1]";
+    public static string Checkbox2 = "(//input[@type='checkbox'])[2]";
+
+    //LOGIN PAGE
+    public static string LoginPageTitle = "h2";    
+    public static string LoginPageTitleCopy = "Login Page";
+    public static string PageSubHeader = "h4[class='subheader']";
+    public static string PageCopy = "This is where you can log into the secure area. Enter tomsmith for the username and SuperSecretPassword! for the password. If the information is wrong you should see error messages.";
+    public static string Username = "tomsmith";
+    public static string Password = "SuperSecretPassword!";
+    public static string UsernameField = "input[name='username']";
+    public static string PasswordField = "input[name='password']";
+    public static string LoginButton = "button[type='submit']";
+    
+    //VALIDATION
+    public static string InvalidUsername = "invaliduser";
+    public static string InvalidPassword = "invalidpassword";
+    public static string ValidationError = "div[class='flash error']";
+    
+    //SECURE AREA PAGE
+    public static string ErrorMessages = "Error messages";
+    public static string SuccessMessage = "div[class='flash success']";
+    public static string SecureAreaTitle = "h2";
+    public static string SecureAreaTitleCopy = "Secure Area";
+    public static string SuccessText = "You logged into a secure area!";
+    public static string LogoutButton = "a.button.secondary.radius";
+}
