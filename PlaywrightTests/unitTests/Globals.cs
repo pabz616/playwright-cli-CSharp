@@ -14,6 +14,12 @@ public static class Globals
     public static string Checkbox1 = "(//input[@type='checkbox'])[1]";
     public static string Checkbox2 = "(//input[@type='checkbox'])[2]";
 
+    //DROPDOWN PAGE
+    public static string DropdownListPageTitle = "h3";    
+    public static string DropdownListPageTitleCopy = "Dropdown List";
+    public static string DropdownList = "//select[@id='dropdown']";
+
+
     //LOGIN PAGE
     public static string LoginPageTitle = "h2";    
     public static string LoginPageTitleCopy = "Login Page";
