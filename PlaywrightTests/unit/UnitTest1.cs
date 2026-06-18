@@ -1,30 +1,3 @@
-using System.Text.RegularExpressions;
-using Microsoft.Playwright;
-using Microsoft.Playwright.MSTest;
-
-namespace PlaywrightTests;
-
-[TestClass]
-public class ExampleTest : PageTest
-{
-    [TestMethod]
-    public async Task HasTitle()
-    {
-        await Page.GotoAsync("https://playwright.dev");
-
-        // Expect a title "to contain" a substring.
-        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
-    }
-
-    [TestMethod]
-    public async Task GetStartedLink()
-    {
-        await Page.GotoAsync("https://playwright.dev");
-
-        // Click the get started link.
-        await Page.GetByRole(AriaRole.Link, new() { Name = "Get started" }).ClickAsync();
-
-        // Expects page to have a heading with the name of Installation.
-        await Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Installation" })).ToBeVisibleAsync();
-    } 
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9eb934c6c6aa65272021d0c9742a2feb61b05ca7c4b88aa2c31aff774bda869c
+size 889
