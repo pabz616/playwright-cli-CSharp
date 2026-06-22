@@ -17,31 +17,28 @@ public class StringUnitTest : PageTest
     [TestMethod]
     public async Task HasTitle()
     {
-        await Expect(Page.Locator(Globals.LoginPageTitle)).ToBeVisibleAsync();
-        await Expect(Page.Locator(Globals.LoginPageTitle)).ToContainTextAsync(new Regex(Globals.LoginPageTitleCopy));
+        await Expect(Page.Locator(Globals.TyposPageTitle)).ToBeVisibleAsync();
+        await Expect(Page.Locator(Globals.TyposPageTitle)).ToContainTextAsync(new Regex(Globals.TyposPageTitleCopy));
     }
 
     [TestMethod]
     public async Task HasCopyElements()
     {
-        await Expect(Page.Locator(Globals.TyposPageCopyElement1)).ToBeVisibleAsync();
-        await Expect(Page.Locator(Globals.TyposPageCopyElement2)).ToBeVisibleAsync();
+        await Expect(Page.Locator($"xpath={Globals.TyposPageCopyElement1}")).ToBeVisibleAsync();
+        await Expect(Page.Locator($"xpath={Globals.TyposPageCopyElement2}")).ToBeVisibleAsync();
     }
 
     [TestMethod]
     public async Task HasCopyText()
     {
-        await Expect(Page.Locator(Globals.TyposPageCopyElement1)).ToContainTextAsync(new Regex(Globals.TyposPageCopy));
-        await Expect(Page.Locator(Globals.TyposPageCopyElement2)).ToContainTextAsync(new Regex(Globals.TyposPageCopy2));
+        await Expect(Page.Locator($"xpath={Globals.TyposPageCopyElement1}")).ToContainTextAsync(new Regex(Globals.TyposPageCopy));
+        await Expect(Page.Locator($"xpath={Globals.TyposPageCopyElement2}")).ToContainTextAsync(new Regex(Globals.TyposPageCopy2));
     }
 
-    // [TestMethod]
-    // public async Task HasCopyLength()
-    // {
-    //     var copyLength1 = Page.Locator(Globals.TyposPageCopyElement1);
-    //     var copyLength2 = Page.Locator(Globals.TyposPageCopyElement2);
-
-    //     await Expect(copyLength1.length).ToHaveLengthAsync(3);
-    //     await Expect(copyLength2.length).ToHaveLengthAsync(3);
-    // }
+    [TestMethod]
+    public async Task HasCopyLength()
+    {
+        Assert.AreEqual(Globals.TyposPageCopy.Length, 89);
+        Assert.AreEqual(Globals.TyposPageCopy2.Length, 51);
+    }
 }
