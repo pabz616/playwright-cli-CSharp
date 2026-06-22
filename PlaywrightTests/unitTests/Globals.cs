@@ -49,4 +49,12 @@ public static class Globals
     public static string SecureAreaTitleCopy = "Secure Area";
     public static string SuccessText = "You logged into a secure area!";
     public static string LogoutButton = "a.button.secondary.radius";
+
+    //TYPOS PAGE
+    public static string TyposPageTitle = "h3";
+    public static string TyposPageTitleCopy = "Typos";
+    public static string TyposPageCopyElement1= "(//p)[1]";
+    public static string TyposPageCopyElement2= "(//p)[2]";
+    public static string TyposPageCopy = "This example demonstrates a typo being introduced. It does it randomly on each page load.";
+    public static string TyposPageCopy2 = "Sometimes you'll see a typo, other times you won't.";
 }
